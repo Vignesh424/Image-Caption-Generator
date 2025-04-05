@@ -4,8 +4,7 @@ import google.generativeai as genai
 from dotenv import load_dotenv,find_dotenv
 from PIL import Image
 load_dotenv(find_dotenv())
-genai.configure(api_key, os.getenv='GOOGLE_API_KEY') # Do not use this API key
-
+genai.configure(api_key, os.getenv='GOOGLE_API_KEY') 
 
 def get_gemini_response(input,image):
     model=genai.GenerativeModel('gemini-2.0-flash')
