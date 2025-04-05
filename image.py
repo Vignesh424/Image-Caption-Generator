@@ -3,8 +3,8 @@ import streamlit as st
 import google.generativeai as genai
 from dotenv import load_dotenv,find_dotenv
 from PIL import Image
-load_dotenv()
-genai.configure(api_key="AIzaSyBZUa2gpJGrSbOBzG23dE8LNhPmY4lgdrg") # Do not use this API key
+load_dotenv(find_dotenv())
+genai.configure(api_key, os.getenv='GOOGLE_API_KEY') # Do not use this API key
 
 
 def get_gemini_response(input,image):
